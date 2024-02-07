@@ -1,11 +1,12 @@
-FROM ruby:2.7.2
+FROM ruby:3.0
 
 RUN apt-get update
 RUN apt-get install --assume-yes --no-install-recommends build-essential \
     postgresql-client \
     ca-certificates\
     nodejs \
-    graphviz
+    graphviz \
+    libpq-dev
 
 ENV APP /usr/src/app
 
