@@ -9,16 +9,11 @@
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
 
-<h1><%= @user.name %>'s activity</h1>
-  <table> 
-  <tr>
-  <th>Articles</th>
-  <th>Comments</th>
+<br/>
+<h2>Articles</h2>
+<% @user.article.each do |comment| %>
+<li>
+<%= comment.title%>
+</li>
 
-  </tr>
-
-  <tr>
-    <td>articles seciton</td>
-    <td>comments section</td>
-  </tr>   
-  </table>
+<% end %>

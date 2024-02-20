@@ -9,9 +9,12 @@
   <%= button_to "Destroy this article",  @article, method: :delete %>
 </div>
 
+<br/>
 <h2>Comments</h2>
-
+<p> made by: <%= link_to @article.user.name, @article.user%> </p>
 <% @article.comment.each do |comment| %>
-<p><%= comment.message %></p>
+<li>
+<%= comment.message %>
+</li>
 
 <% end %>
