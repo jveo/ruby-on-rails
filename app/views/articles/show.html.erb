@@ -11,16 +11,12 @@
 
 <br/>
 <h2>Comments</h2>
-<p> made by: <%= link_to @article.user.name, @article.user%> </p>
+<p> <%= link_to "Visit User", @article.user%> </p>
+<br/>
 <% @article.comment.each do |comment| %>
-<%= comment.message %>
-<table>
-<th></th>
-
-<tr>
+<p> <%= comment.message %> 
 <%= link_to "View", comment%>
-</tr>
+</p>
 
- </table>
 
 <% end %>

@@ -11,9 +11,11 @@
 
 <br/>
 <h2>Articles</h2>
-<% @user.article.each do |comment| %>
+<% @user.article.each do |article| %>
 <li>
-<%= comment.title%>
+<%= article.title %>
+<%= link_to "View", article %>
+</p>
 </li>
 
 <% end %>
